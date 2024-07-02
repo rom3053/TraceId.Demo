@@ -31,7 +31,7 @@ public class LogTraceIdMiddleware
             return Task.CompletedTask;
         });
 
-        using (LogContext.PushProperty(LoggerConstants.LoggerProperties.TraceId, traceId))
+        using (LogContext.PushProperty(LoggerConstants.LoggerProperties.TraceId, traceId.ToString()))
         {
             await _next(context);
         }

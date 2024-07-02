@@ -10,21 +10,28 @@ public class TraceIdDemoController : ControllerBase
 {
     private readonly MassTransitService _massTransitService;
     private readonly TraceIdService _traceIdService;
+    private readonly ILogger<TraceIdDemoController> _logger;
 
     public TraceIdDemoController(MassTransitService massTransitService,
-        TraceIdService traceIdService)
+        TraceIdService traceIdService,
+        ILogger<TraceIdDemoController> logger)
     {
         _massTransitService = massTransitService;
         _traceIdService = traceIdService;
+        _logger = logger;
     }
 
     [HttpPost("SendRequestClientMessage")]
     public async Task<object> SendRequestClientMessage([FromBody] string message)
     {
+        _logger.LogInformation("Before sending into queue TraceId: {TraceId}");
+
         var result = await _massTransitService.GetClientRequestMessage(new Dtos.MassTransit.Requests.RequestClientDemoRequest
         {
             Message = message
         });
+
+        _logger.LogInformation("After sending into queue TraceId: {TraceId)");
 
         return new
         {
@@ -33,9 +40,9 @@ public class TraceIdDemoController : ControllerBase
         };
     }
 
-    //[HttpPost]
-    //public async Task<string> SendConsumerMessage([FromBody] string s)
-    //{
-    //    return "ss";
-    //}
+    [HttpGet("TestTraceIdToDb")]
+    public async Task TestTraceIdToDB()
+    {
+        _logger.LogInformation("TraceId: {TraceId}");
+    }
 }
