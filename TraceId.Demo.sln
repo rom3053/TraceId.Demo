@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraceId.Demo.Common", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraceId.Demo.MassTransit", "src\TraceId.Demo.MassTransit\TraceId.Demo.MassTransit.csproj", "{09524DCA-11E2-433B-9A1D-0AF822AF011D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceId.Demo.TraceIdHttpClient", "TraceId.Demo.HttpClient\TraceId.Demo.TraceIdHttpClient.csproj", "{13639BB6-8779-4CFF-A71B-DD2E4085DEFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceId.Demo.TraceIdHttpClient", "src\TraceId.Demo.HttpClient\TraceId.Demo.TraceIdHttpClient.csproj", "{13639BB6-8779-4CFF-A71B-DD2E4085DEFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
