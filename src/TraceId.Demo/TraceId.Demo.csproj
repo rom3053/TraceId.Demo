@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\TraceId.Demo.HttpClient\TraceId.Demo.TraceIdHttpClient.csproj" />
     <ProjectReference Include="..\TraceId.Demo.Common\TraceId.Demo.Common.csproj" />
     <ProjectReference Include="..\TraceId.Demo.MassTransit\TraceId.Demo.MassTransit.csproj" />
   </ItemGroup>

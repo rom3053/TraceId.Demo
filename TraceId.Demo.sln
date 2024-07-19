@@ -7,11 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{605AEAAC-117
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraceId.Demo", "src\TraceId.Demo\TraceId.Demo.csproj", "{0C717850-C805-4806-88D0-2B9D5D9D6AF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceId.Demo.RabbitMQ", "src\TraceId.Demo.RabbitMQ\TraceId.Demo.RabbitMQ.csproj", "{387A16E9-0797-4B3D-BD9A-9654EEC9049D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraceId.Demo.RabbitMQ", "src\TraceId.Demo.RabbitMQ\TraceId.Demo.RabbitMQ.csproj", "{387A16E9-0797-4B3D-BD9A-9654EEC9049D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceId.Demo.Common", "src\TraceId.Demo.Common\TraceId.Demo.Common.csproj", "{73D8993D-3C83-439E-8105-D7A6EE2573C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraceId.Demo.Common", "src\TraceId.Demo.Common\TraceId.Demo.Common.csproj", "{73D8993D-3C83-439E-8105-D7A6EE2573C7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TraceId.Demo.MassTransit", "src\TraceId.Demo.MassTransit\TraceId.Demo.MassTransit.csproj", "{09524DCA-11E2-433B-9A1D-0AF822AF011D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraceId.Demo.TraceIdHttpClient", "TraceId.Demo.HttpClient\TraceId.Demo.TraceIdHttpClient.csproj", "{13639BB6-8779-4CFF-A71B-DD2E4085DEFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{09524DCA-11E2-433B-9A1D-0AF822AF011D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09524DCA-11E2-433B-9A1D-0AF822AF011D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09524DCA-11E2-433B-9A1D-0AF822AF011D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13639BB6-8779-4CFF-A71B-DD2E4085DEFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13639BB6-8779-4CFF-A71B-DD2E4085DEFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13639BB6-8779-4CFF-A71B-DD2E4085DEFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13639BB6-8779-4CFF-A71B-DD2E4085DEFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{387A16E9-0797-4B3D-BD9A-9654EEC9049D} = {605AEAAC-117D-47CC-9E9A-ED569A9C70B3}
 		{73D8993D-3C83-439E-8105-D7A6EE2573C7} = {605AEAAC-117D-47CC-9E9A-ED569A9C70B3}
 		{09524DCA-11E2-433B-9A1D-0AF822AF011D} = {605AEAAC-117D-47CC-9E9A-ED569A9C70B3}
+		{13639BB6-8779-4CFF-A71B-DD2E4085DEFF} = {605AEAAC-117D-47CC-9E9A-ED569A9C70B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {105A19CE-3E57-4DE9-9720-A5964F8BAEC8}

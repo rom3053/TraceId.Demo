@@ -2,6 +2,7 @@
 using TraceId.Demo.Configurations;
 using TraceId.Demo.Dtos.MassTransit;
 using TraceId.Demo.Dtos.MassTransit.Requests;
+using TraceId.Demo.TraceIdHttpClient;
 using TraceId.Demo.MassTransit.Consumers;
 using TraceId.Demo.MassTransit.Middlewares.TraceIdMiddlewares;
 using TraceId.Demo.MassTransit.Services;
@@ -47,6 +48,9 @@ public static class ConfigureServices
         });
         services.AddScoped<TraceIdService>();
         services.AddScoped<MassTransitService>();
+
+        services.AddScoped<TraceIdHttpClientHandler>();
+        services.AddScoped<DemoHttpClient>();
 
         return services;
     }

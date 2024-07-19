@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\TraceId.Demo.Common\TraceId.Demo.Common.csproj" />
     <ProjectReference Include="..\TraceId.Demo.Common\TraceId.Demo.Common.csproj" />
   </ItemGroup>
 

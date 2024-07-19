@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TraceId.Demo.Constants;
 using TraceId.Demo.MassTransit.Services;
 using TraceId.Demo.Services;
 
@@ -6,19 +7,22 @@ namespace TraceId.Demo.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class TraceIdDemoController : ControllerBase
+public class MassTransitTraceIdDemoController : ControllerBase
 {
     private readonly MassTransitService _massTransitService;
     private readonly TraceIdService _traceIdService;
-    private readonly ILogger<TraceIdDemoController> _logger;
+    private readonly ILogger<MassTransitTraceIdDemoController> _logger;
+    private readonly DemoHttpClient _demoHttpClient;
 
-    public TraceIdDemoController(MassTransitService massTransitService,
+    public MassTransitTraceIdDemoController(MassTransitService massTransitService,
         TraceIdService traceIdService,
-        ILogger<TraceIdDemoController> logger)
+        ILogger<MassTransitTraceIdDemoController> logger,
+        DemoHttpClient demoHttpClient)
     {
         _massTransitService = massTransitService;
         _traceIdService = traceIdService;
         _logger = logger;
+        _demoHttpClient = demoHttpClient;
     }
 
     [HttpPost("SendRequestClientMessage")]
